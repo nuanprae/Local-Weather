@@ -1,7 +1,23 @@
-body {
-    margin: 60px;
-    background-color: #B9DBDF;
+.app-background {
+  position: relative;
+  margin: auto;
+  display: block;
+  background-image: url(http://res.cloudinary.com/dk7wue4rl/image/upload/v1502083787/6972_qreom8.jpg);
+  width: 375px;
+  height: 667px;
 }
-.jumbotron {
-    background-color: white;
+
+.city {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 8%;
+}
+
+.icon {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 15%;
 }
