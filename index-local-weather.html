@@ -22,24 +22,26 @@
         <link rel="stylesheet" href="local-weather.css">
     </head>
 
-    <body>
-        <div class="container-fluid">
-            <div class="jumbotron">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2 class="text-center">What's the weather like today?</<h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 text-center" id="city">
-                        <p>City: <input type="text" name="city" placeholder="Sydney"><button class="btn btn-primary" type="submit">Submit</button>
-                        </p>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 text-center" id="current">
-                        <button class="btn btn-success">Use Current Location</button>
-                    </div>
-                </div>
-            </div>
+    <body onload="getLocation()">
+         <!-- app background -->
+        <div class="app-background">
+            
+            <div class="location"></div>
+            <div class="icon"></div>
+  
         </div>
+    
+    <!--jQuery -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+    crossorigin="anonymous"></script>
+    
+    <script src="local-weather.js"></script>
+    
     </body>
 </html>
