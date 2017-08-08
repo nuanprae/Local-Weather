@@ -5,9 +5,10 @@
   background-image: url(http://res.cloudinary.com/dk7wue4rl/image/upload/v1502083787/6972_qreom8.jpg);
   width: 375px;
   height: 667px;
+  top: 5%;
 }
 
-.city {
+.location {
   position: absolute;
   text-align: center;
   width: 100%;
