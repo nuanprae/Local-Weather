@@ -51,21 +51,24 @@ function getWeather(data) {
 function getIcon(weatherCondition) {
     var weatherIcon = document.getElementById("weather-icon");
     switch(weatherCondition) {
-        case "thunderstorm":
+        case "Thunderstorm":
         weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502190131/storm_ilfus1.svg";
         break;
-        case "drizzle":
+        case "Drizzle":
         weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502193618/drizzle_qsxgys.svg";
         break;
-        case "clear": 
+        case "Rain":
+        weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502191524/rain_dq739q.svg";
+        break;
+        case "Snow":
+        weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502155344/snow_cbtm7l.svg";
+        case "Clear": 
         weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502188386/sunny_xmwsvi.svg";
         break;
         case "Clouds":
         weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502154653/cloud_x4uqwd.svg";
         break;
     }
-    
-    
 }
 
 
