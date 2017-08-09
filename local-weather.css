@@ -23,14 +23,14 @@
   text-align: center;
   width: 100%;
   height: 100%;
-  top: 15%;
+  top: 20%;
 }
 
 .weather {
     position: absolute;
     text-align: center;
     width: 100%;
-    top: 50%;
+    top: 15%;
     font-family: Rajdhani;
     font-size: 150%;
     color: grey;
