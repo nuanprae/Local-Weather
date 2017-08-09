@@ -25,3 +25,13 @@
   height: 100%;
   top: 15%;
 }
+
+.weather {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    font-family: Rajdhani;
+    font-size: 150%;
+    color: grey;
+}
