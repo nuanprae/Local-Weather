@@ -12,9 +12,9 @@
   position: absolute;
   text-align: center;
   width: 100%;
-  top: 8%;
+  top: 5%;
   font-family: Rajdhani;
-  font-size: 200%;
+  font-size: 350%;
   color:grey;
 }
 
@@ -30,8 +30,18 @@
     position: absolute;
     text-align: center;
     width: 100%;
-    top: 15%;
+    top: 55%;
     font-family: Rajdhani;
-    font-size: 150%;
+    font-size: 200%;
     color: grey;
+}
+
+.temperature {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 20%;
+  font-family: Rajdhani;
+  font-size: 450%;
+  color: grey;
 }

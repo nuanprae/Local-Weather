@@ -4,8 +4,8 @@ var latitude;
 var longitude;
 var apiUrl; 
 var cityName;
-var temperature;
 var weatherCondition;
+var temperature;
 
 // find out user's location and display all items onload
 navigator.geolocation.getCurrentPosition(function(position) {
@@ -28,23 +28,24 @@ function displayItems() {
 
 // different items for app
 function getItems(data) {
-    getLocation(data);
     getWeather(data);
     getIcon(weatherCondition);
+    getTemperature(data);
+    getLocation(data);
 }
 
 // display location eg. Homebush
 function getLocation(data) {
-    var location = document.querySelector(".location");
-    cityName = data.name
-    location.innerHTML = cityName;
+    var locationDisplay = document.querySelector(".location");
+    cityName = data.name;
+    locationDisplay.innerHTML = cityName;
 }
 
 // display weather condition eg. clear, clouds, rain
 function getWeather(data) {
-    var weather = document.querySelector(".weather");
+    var weatherDisplay = document.querySelector(".weather");
     weatherCondition = data.weather[0].main;
-    weather.innerHTML = weatherCondition;
+    weatherDisplay.innerHTML = weatherCondition;
 }
 
 // display weather icon that matches with weather condition
@@ -71,8 +72,12 @@ function getIcon(weatherCondition) {
     }
 }
 
+function getTemperature(data) {
+    var temperatureDisplay = document.querySelector(".temperature");
+    temperature = Math.round(data.main.temp);
+    temperatureDisplay.innerHTML = temperature;
+}
 
- 
 
 
 
