@@ -25,16 +25,21 @@
     <body onload="displayItems()">
          <!-- app background -->
         <div class="app-background">
-            
+            <div class="message" id="message">Click allow to retrieve your local weather</div>
             <div class="location"></div>
             <div class="icon">
                 <img id="weather-icon" src="">
             </div>
             <div class="weather"></div>
             <div class="temperature"></div>
-  
+            <div class="switch hidden">
+                <label class="switch-c" for="c">&deg;C</label>
+                <input type ="radio" name="temp_select" id="c" checked="checked" onclick="changeToCelsius()">
+                <label class="switch-f" for="f">&deg;F</label>
+                <input type="radio" name="temp_select" id="f" onclick="changeToFahrenheit()">
+            </div>
         </div>
-    
+
     <!--jQuery -->
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
