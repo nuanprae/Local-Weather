@@ -1,4 +1,3 @@
- 
 // global variables
 var latitude; 
 var longitude;
@@ -29,7 +28,7 @@ function displayItems() {
 function getItems(data) {
     getBackground(data);
     getWeather(data);
-    getIcon(weatherCondition);
+    getIcon(weatherCondition, data);
     getTemperature(data);
     getLocation(data);
     showElement();
@@ -51,7 +50,7 @@ function getWeather(data) {
 }
 
 // display weather icon that matches with weather condition
-function getIcon(weatherCondition) {
+function getIcon(weatherCondition, data) {
     var weatherIcon = document.getElementById("weather-icon");
     switch(weatherCondition) {
         case "Thunderstorm":
@@ -69,8 +68,12 @@ function getIcon(weatherCondition) {
         case "Atmosphere":
         weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502693302/atmosphere_ik9dtt.svg";
         break;
-        case "Clear": 
-        weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502188386/sunny_xmwsvi.svg";
+        case "Clear":
+          if (isDay(data)) {
+            weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502188386/sunny_xmwsvi.svg";
+          } else {
+            weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502710834/clear-night_qb51hj.svg";
+          }
         break;
         case "Clouds":
         weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502154653/cloud_x4uqwd.svg";
@@ -100,12 +103,10 @@ function changeToCelsius() {
 
 // different backgrounds for night and day time based on sunrise and sunset
 function getBackground(data) {
-    var timeStamp = Math.floor(Date.now()/1000);
-    var sunrise = data.sys.sunrise;
-    var sunset = data.sys.sunset;
+
     var appBackground = document.querySelector(".app-background");
     
-    if (timeStamp >= sunrise && timeStamp <= sunset) {
+    if (isDay(data)) {
         appBackground.style.backgroundImage = "url(http://res.cloudinary.com/dk7wue4rl/image/upload/v1502083787/6972_qreom8.jpg)";     
     } else {
         appBackground.style.backgroundImage = "url(http://res.cloudinary.com/dk7wue4rl/image/upload/v1502154194/OR7W9B0_ixyxop.jpg)";
@@ -124,8 +125,16 @@ function showElement() {
     hiddenClass.classList.remove("hidden"); 
 }
 
+function isDay(data) {
+  var timeStamp = Math.floor(Date.now()/1000);
+  var sunrise = data.sys.sunrise;
+  var sunset = data.sys.sunset;
+  if (timeStamp >= sunrise && timeStamp <= sunset) {
+    return true;
+  } else {
+    return false;
+  }
+}
 // must be a better way of writing hideElement and showElement, so can be used over and over
 
 // case Atmosphere is not showing weatherIcon
-
-// still have to add two night icons 
