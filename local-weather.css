@@ -1,21 +1,32 @@
+body {
+  font-family: Rajdhani;
+  color: grey;
+}
+
 .app-background {
   position: relative;
   margin: auto;
   display: block;
-  background-image: url(http://res.cloudinary.com/dk7wue4rl/image/upload/v1502083787/6972_qreom8.jpg);
+  background-image: url(http://res.cloudinary.com/dk7wue4rl/image/upload/v1502154827/1087_gqusj6.jpg);
   width: 375px;
   height: 667px;
   top: 5%;
 }
 
+.message {
+  position: relative;
+  margin: auto;
+  display: block;
+  font-size: 300%;
+  text-align: center;
+  top: 30%;
+}
 .location {
   position: absolute;
   text-align: center;
   width: 100%;
   top: 5%;
-  font-family: Rajdhani;
   font-size: 350%;
-  color:grey;
 }
 
 .icon {
@@ -31,9 +42,7 @@
     text-align: center;
     width: 100%;
     top: 55%;
-    font-family: Rajdhani;
     font-size: 200%;
-    color: grey;
 }
 
 .temperature {
@@ -41,7 +50,18 @@
   text-align: center;
   width: 100%;
   bottom: 20%;
-  font-family: Rajdhani;
-  font-size: 450%;
-  color: grey;
+  font-size: 600%;
 }
+
+.switch {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  font-size: 200%;
+}
+
+.hidden {
+  display: none;
+}
+
+
