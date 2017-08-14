@@ -67,7 +67,7 @@ function getIcon(weatherCondition) {
         weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502155344/snow_cbtm7l.svg";
         break;
         case "Atmosphere":
-        weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502676874/atmosphere_sp5kzj.svg";
+        weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502693302/atmosphere_ik9dtt.svg";
         break;
         case "Clear": 
         weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502188386/sunny_xmwsvi.svg";
@@ -127,3 +127,5 @@ function showElement() {
 // must be a better way of writing hideElement and showElement, so can be used over and over
 
 // case Atmosphere is not showing weatherIcon
+
+// still have to add two night icons 
