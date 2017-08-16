@@ -78,6 +78,9 @@ function getIcon(weatherCondition, data) {
         case "Clouds":
         weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502154653/cloud_x4uqwd.svg";
         break;
+        case "Extreme":
+        weatherIcon.src = "http://res.cloudinary.com/dk7wue4rl/image/upload/v1502830110/extreme_orziez.svg";
+        break;
     }
 }
 
